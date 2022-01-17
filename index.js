@@ -153,6 +153,8 @@ app.use((err,req,res,next) =>{
     res.status(statusCode).render('error', {err});
 })
 
-app.listen(8888, ()=>{
-    console.log('Serving on port 8888');
+const port = process.env.PORT || 8888;
+
+app.listen(port, ()=>{
+    console.log(`serving on port ${port}`);
 })
